@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  root: './client',
+  root: './client',              ← ESSENCIAL!
   build: {
     outDir: '../dist',
     emptyOutDir: true,
@@ -13,9 +13,5 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './client/src'),
     },
-  },
-  server: {
-    port: 3000,
-    strictPort: false,
   },
 })
